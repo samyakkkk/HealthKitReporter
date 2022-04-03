@@ -532,8 +532,8 @@ public class HealthKitReader {
         ],
         limit: Int = HKObjectQueryNoLimit,
         dataHandler: @escaping WorkoutRouteDataHandler
-    ) throws -> SampleQuery {
-        return try SeriesSampleRetriever().makeWorkoutRouteQuery(
+    ) throws -> AnchoredObjectQuery {
+        return try SeriesSampleRetriever().makeAnchoredWorkoutRouteQuery(
             healthStore: healthStore,
             predicate: predicate,
             sortDescriptors: sortDescriptors,
